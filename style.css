@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, Verdana,  sans-serif; /* Семейство шрифтов */
+    font-size: 11pt; /* Размер основного шрифта в пунктах  */
+    background-color: blue; /* Цвет фона веб-страницы */
+    color: #333; /* Цвет основного текста */
+    background-image: url(https://img3.badfon.ru/wallpaper/big/6/86/karta-mira-voda-kapli-krasivo.jpg);
+}
+.header{
+    color: black; /* Цвет заголовка */
+    font-size: 24pt; /* Размер шрифта в пунктах */
+    font-family: Arial, Helvetica, sans-serif; /* Семейство шрифтов */
+    font-weight: normal; /* Нормальное начертание текста  */
+    border: 1px;
+    text-align:center;
+    background-color: antiquewhite;
+    margin: 3% auto; /*pour centrer un élement, mais un élement doit avoir son width*/
+    width: max-content;
+}
+.container {
+    margin: 3% auto;
+    border: blanchedalmond;
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-gap: 3%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 1%;
+}
+
+.card{
+    text-align: center;
+    align-self: inherit;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+}
+
+.front{
+    background-color: darkblue;
+    position: absolute;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 2;
+    color: aqua;
+    backface-visibility: hidden;
+}
+
+.back{
+    background-color: aqua;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 1;
+    color: darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+p{
+    height: 100%;
+    width: 100%;
+}
